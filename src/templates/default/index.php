@@ -9,11 +9,9 @@
 <?php include 'templates/'.$_SESSION[$shortTitle.'User']['template'].'/header.php'; ?>
  <div class="container">
   <div class="content" style="max-width: 500px; text-align: left;">
-Welcome to Devana 2 beta 1.<br><br>
-Devana 2 is an open source browser strategy game developed from the ground up (without any third party code) using OOP (Object Oriented Programming) code written in the MVC (Model View Controller) paradigm.<br><br>
-Visit the <a class="link" href="http://devana.eu/blog" target="_blank">devBlog</a> for more information.<br>
-Stay updated via the Facebook <a class="link" href="https://www.facebook.com/DevanaGame" target="_blank">page</a>.<br>
-Enjoy. :)
+欢迎来到Devana 2 测试版本.
+国内木有非死不可。。所以就不用去作者那了解信息了<br>
+玩的开心. :)
   </div>
  </div>
 <?php include 'templates/'.$_SESSION[$shortTitle.'User']['template'].'/footer.php'; ?>
