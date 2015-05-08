@@ -2,7 +2,13 @@
 <?php
 if ((isset($_SESSION[$shortTitle.'User']['level']))&&($_SESSION[$shortTitle.'User']['level']>=3)) $adminPanel=' | <a class="small" href="'.$location.'admin.php">'.$ui['adminPanel'].'</a>';
 else $adminPanel='';
-echo '<div class="footer">devana created by Andrei Busuioc...汉化 by Mars<br /><a class="small" href="devanapedia.php?action=list&view=modules&faction=0">'.$ui['devanapedia'].'</a> | <a class="small" href="simulator.php">'.$ui['combatSimulator'].'</a> | <a class="small" href="'.$location.'terms.php">'.$ui['terms'].'</a> | <a class="small" href="'.$location.'credits.php">'.$ui['credits'].'</a> | <a class="small" href="'.$location.'contact.php">'.$ui['contact'].'</a>'.$adminPanel.'</div>';
+echo '<div class="footer">devana created by Andrei Busuioc...汉化 by Mars<br />
+<a class="small" href="devanapedia.php?action=list&view=modules&faction=0">'.$ui['devanapedia'].'</a> |
+ <a class="small" href="simulator.php">'.$ui['combatSimulator'].'</a> |
+ <a class="small" href="'.$location.'terms.php">'.$ui['terms'].'</a> |
+ <a class="small" href="'.$location.'credits.php">'.$ui['credits'].'</a> |
+  <a class ="small" href="http://www.ezlands.com">'.$ui['mainWeb'].'</a>|
+ <a class="small" href="'.$location.'contact.php">'.$ui['contact'].'</a>'.$adminPanel.'</div>';
 if ($benchmark)
 {
  $endTime=misc::microTime();

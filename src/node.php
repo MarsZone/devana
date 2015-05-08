@@ -70,6 +70,7 @@ if (isset($_SESSION[$shortTitle.'User']['id'], $_GET['action']))
   break;
   case 'add':
    if (isset($_POST['faction'], $_POST['name'], $_POST['x'], $_POST['y']))
+     //echo ' <script type="text/javascript">alert(); </script>';
     if (($_POST['faction']!='')&&($_POST['name']!='')&&($_POST['x']!='')&&($_POST['y']!=''))
     {
      $node=new node();

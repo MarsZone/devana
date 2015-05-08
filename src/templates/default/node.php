@@ -114,6 +114,7 @@ if (isset($_SESSION[$shortTitle.'User']['id'], $_GET['action']))
     <div style="border-top: 1px solid black; padding-top: 5px; margin-top: 5px;"><a class="link" href="node.php?action=get&nodeId='.$node->data['id'].'">'.$node->data['name'].'</a></div>';
    }
   break;
+  
   case 'add':
    echo '
     <form method="post" action="?action=add">

@@ -44,6 +44,7 @@ function fetch(link, vars)
   {
    contentData.innerHTML="";
    data=xmlHttp.responseText;
+   
    if (data.indexOf("<script type='text/javascript'>")>-1)
     for (start=data.indexOf("<script type='text/javascript'>"); start>-1; start=data.indexOf("<script type='text/javascript'>"))
     {
@@ -71,6 +72,24 @@ function fetch(link, vars)
   xmlHttp.send(null);
  }
 }
+//To The Node Add MC
+function createTown(link, vars)
+{
+    alert(vars);
+    var postUrl = link;//提交地址  
+    var postData = vars;//第一个数据  
+    var ExportForm = document.createElement("FORM");  
+    document.body.appendChild(ExportForm);  
+    ExportForm.method = "POST";  
+    var newElement = document.createElement("input");  
+    newElement.setAttribute("vars", "sn");  
+    newElement.setAttribute("type", "hidden");    
+    ExportForm.appendChild(newElement);  
+    newElement.value = postData; 
+    ExportForm.action = postUrl;
+    ExportForm.submit();
+}
+
 function timedJump(objectId, url)
 {
 	object=document.getElementById(objectId);

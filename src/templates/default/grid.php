@@ -78,6 +78,8 @@ for ($i=0; $i<$sc; $i++)
   case 2: $sectorColor='brown'; break;
  }
  $minimap.='<div class="sector" style="background-color: '.$sectorColor.';" id="sector_'.$grid->data[$i]['x'].'_'.$grid->data[$i]['y'].'" onClick="fetch(\'getGrid.php\', \'x='.$grid->data[$i]['x'].'&y='.$grid->data[$i]['y'].'\')"></div>';
+ //MC $minimap.='<div class="sector" style="background-color: '.$sectorColor.';" id="sector_'.$grid->data[$i]['x'].'_'.$grid->data[$i]['y'].'" onClick="createTown(\'node.php?action=add\', \'x='.$grid->data[$i]['x'].'&y='.$grid->data[$i]['y'].'\')"></div>';
+ 
  if (!(($i+1)%$rc)) $minimap.='<br>';
 }
 echo '<div class="cell" style="float: right;"><div class="content" style="z-index: 10;">'.$minimap.'</div></div><div class="clear"></div>';

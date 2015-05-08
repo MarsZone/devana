@@ -24,6 +24,9 @@ for ($j = -3; $j <= 3; $j++)
  </div>
  <div style="position: relative; top: 0px; left: 15px;">
 <?php
+//So .. this is the place display the map view.
+//2015/5/4 I will add the function that when user click the map grid he can chose to add new town or do other thing.
+//version 1 add town first
 $i=0;
 for ($k = 3; $k >= -3; $k--)
 {
