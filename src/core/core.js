@@ -73,19 +73,26 @@ function fetch(link, vars)
  }
 }
 //To The Node Add MC
-function createTown(link, vars)
+function createTown(link, xpos , ypos)
 {
-    alert(vars);
+    //alert(xpos+"_"+ypos);
     var postUrl = link;//提交地址  
-    var postData = vars;//第一个数据  
+    var postXpos = xpos;//第一个数据  
+    var postYpos = ypos;//第一个数据  
+    
     var ExportForm = document.createElement("FORM");  
     document.body.appendChild(ExportForm);  
     ExportForm.method = "POST";  
-    var newElement = document.createElement("input");  
-    newElement.setAttribute("vars", "sn");  
-    newElement.setAttribute("type", "hidden");    
+    var newElement = document.createElement("input"); 
     ExportForm.appendChild(newElement);  
-    newElement.value = postData; 
+    newElement.value = postXpos; 
+    newElement.setAttribute("name", "xPos"); 
+    
+     var newElement2 = document.createElement("input"); 
+    ExportForm.appendChild(newElement2);  
+    newElement2.value = postYpos; 
+    newElement2.setAttribute("name", "yPos"); 
+    
     ExportForm.action = postUrl;
     ExportForm.submit();
 }

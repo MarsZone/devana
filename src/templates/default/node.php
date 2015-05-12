@@ -124,7 +124,7 @@ if (isset($_SESSION[$shortTitle.'User']['id'], $_GET['action']))
    echo '</select></div></div>
      <div><div class="cell"></div><div class="cell" id="factionDescription">'.$gl['factions'][0]['description'].'</div></div>
      <div><div class="cell">'.$ui['name'].'</div><div class="cell"><input class="textbox" type="text" name="name"></div></div>
-     <div><div class="cell">'.$ui['location'].'</div><div class="cell">'.$ui['x'].'<input class="textbox" type="text" name="x" size="2">'.$ui['y'].'<input class="textbox" type="text" name="y" size="2"></div></div>
+     <div><div class="cell">'.$ui['location'].'</div><div class="cell">'.$ui['x'].'<input class="textbox" type="text" name="x" value="'.$_POST['xPos'].'" size="2">'.$ui['y'].'<input class="textbox" type="text" name="y" value="'.$_POST['yPos'].'" size="2"></div></div>
      <div><input class="button" type="submit" value="'.$ui['add'].'"></div>
     </form>
     <script type="text/javascript">

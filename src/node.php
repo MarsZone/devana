@@ -8,7 +8,9 @@ if (isset($_SESSION[$shortTitle.'User']['id'], $_GET['action']))
 {
  foreach ($_POST as $key=>$value)
  {
-  if ($key=='name') $value=preg_replace('/[^a-zA-Z0-9]/', '', $value);
+  //我说为毛不能输入中文。这里有个正则过滤。靠
+  //有必要之后加个中文验证吧
+  //if ($key=='name') $value=preg_replace('/[^a-zA-Z0-9]/', '', $value);
   if (in_array($key, array('x', 'y', 'faction'))) $_POST[$key]=misc::clean($value, 'numeric');
   else $_POST[$key]=misc::clean($value);
  }
@@ -70,7 +72,7 @@ if (isset($_SESSION[$shortTitle.'User']['id'], $_GET['action']))
   break;
   case 'add':
    if (isset($_POST['faction'], $_POST['name'], $_POST['x'], $_POST['y']))
-     //echo ' <script type="text/javascript">alert(); </script>';
+      //echo ' <script type="text/javascript">alert( $node->data["name"]); </script>';
     if (($_POST['faction']!='')&&($_POST['name']!='')&&($_POST['x']!='')&&($_POST['y']!=''))
     {
      $node=new node();

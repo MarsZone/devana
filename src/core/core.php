@@ -238,7 +238,7 @@ class grid
   if ((isset($this->data[$i]))&&($this->data[$i]['x']==$x)&&($this->data[$i]['y']==$y))
   {
    //if ($this->data[$i]['type']!=2) $output='href="javascript: fetch(\'getGrid.php\', \'x='.$x.'&y='.$y.'\')" onMouseOver="setSectorData(labels['.$this->data[$i]['type'].'], \'-\', \'-\')" onMouseOut="setSectorData(\'-\', \'-\', \'-\')"';
-   if ($this->data[$i]['type']!=2) $output='href="javascript: createTown(\'node.php?action=add\', \'x='.$x.'&y='.$y.'\')" onMouseOver="setSectorData(labels['.$this->data[$i]['type'].'], \'-\', \'-\')" onMouseOut="setSectorData(\'-\', \'-\', \'-\')"';
+   if ($this->data[$i]['type']!=2) $output='href="javascript: createTown(\'node.php?action=add\','.$x.','.$y.')" onMouseOver="setSectorData(labels['.$this->data[$i]['type'].'], \'-\', \'-\')" onMouseOut="setSectorData(\'-\', \'-\', \'-\')"';
    else
    {
     $node=new node(); $node->get('id', $this->data[$i]['id']);
